@@ -13,10 +13,19 @@
     font-size: 25px !important;
 }
 
+
 .user,
 .user:hover {
     text-decoration: none;
     color: blanchedalmond;
     width: 25%;
     padding: 20px !important;
+}
+
+.back,
+.back:hover {
+    text-decoration: none;
+    color: rgb(44, 38, 28);
+    padding: 10px !important;
+    font-size: 25px !important;
 }

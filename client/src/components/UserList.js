@@ -1,10 +1,10 @@
-
+import { Header } from "./header";
 
 
 export const UserList = () => {
     return (
-        <div className="wrapper">
-           user list
+        <div>
+           <Header/>
         </div>
     );
 }
