@@ -30,8 +30,11 @@
     font-size: 20px !important;
 }
 
-.navbar-item{
-    width: 60px;
+.arrow{
+    width: 60px !important;
+}
+.navbar-item {
+    width: 100px;
     height: auto;
 }
 
@@ -40,5 +43,6 @@ h3 {
     font-size: 20px !important;
     position: relative;
     left: 30px !important;
-    line-height: 2 !important;
+    margin-top: 2px;
+    vertical-align: middle;
 }

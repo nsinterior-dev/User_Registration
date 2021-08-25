@@ -9,7 +9,7 @@ export const Header = ({title, link, visible}) => {
         <div>
             <nav className="navbar bg-light navbar-expand-lg navbar-dark">
                 <ul className="navbar-nav mr-auto">
-                    <li className="navbar-item">
+                    <li className="navbar-item arrow">
                         <Link to="/" className="back"> <ImArrowLeft /></Link>
                     </li>
                     <li className="navbar-item mt-auto">
