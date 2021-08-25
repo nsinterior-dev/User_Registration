@@ -4,7 +4,7 @@ import { Header } from "./header";
 export const UserList = () => {
     return (
         <div>
-           <Header/>
+           <Header title="Users" />
         </div>
     );
 }

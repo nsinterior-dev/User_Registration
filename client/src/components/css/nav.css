@@ -27,5 +27,18 @@
     text-decoration: none;
     color: rgb(44, 38, 28);
     padding: 10px !important;
-    font-size: 25px !important;
+    font-size: 20px !important;
+}
+
+.navbar-item{
+    width: 60px;
+    height: auto;
+}
+
+h3 {
+    padding: 10px !important;
+    font-size: 20px !important;
+    position: relative;
+    left: 30px !important;
+    line-height: 2 !important;
 }
