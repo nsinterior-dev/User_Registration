@@ -7,5 +7,6 @@
     border: black solid 1px;
     height: auto;
     padding: 12px ;
-    margin: 0 auto;
+    margin: 20px auto;
+    transform: translateY(25%);
 }

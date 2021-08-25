@@ -1,9 +1,22 @@
-.wrapper{
+.wrapper {
     border: black solid 1px;
     padding: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-content: center;
     align-items: center;
 }
 
+.btn {
+    padding: 20px !important;
+    width: 25%;
+    font-size: 25px !important;
+}
+
+.user,
+.user:hover {
+    text-decoration: none;
+    color: blanchedalmond;
+    width: 25%;
+    padding: 20px !important;
+}
