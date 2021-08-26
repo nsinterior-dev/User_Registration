@@ -7,6 +7,7 @@ const PORT = 4000;
 
 mongoose.connect('mongodb+srv://adminUser:password1234@cluster0.lkzei.mongodb.net/user?retryWrites=true&w=majority', {
     useNewUrlParser: true,
+    
 });
 
 mongoose.connection.once('open', () => {
@@ -38,6 +39,8 @@ app.post('/create', (req, res) => {
         .catch((err) => {
             res.status(500).send(err.message);
         })
+
+       
 });
 
 

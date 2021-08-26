@@ -10,6 +10,7 @@ export const NewUser = () => {
     const onSubmit = async (data) => {
         await newUser(data);
         history.push("/");
+        console.log(data);
     };
    
 
@@ -17,7 +18,7 @@ export const NewUser = () => {
         <div className="wrap">
          <Header title="Register" />
          <p className="text-center text-primary">You can use the form to fill up the needed details</p>
-         <UserForm onSubmit={()=> onSubmit}/>
+         <UserForm onSubmit={onSubmit}/>
         </div>
     );
 }

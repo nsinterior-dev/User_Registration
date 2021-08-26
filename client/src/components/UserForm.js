@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import './css/form.css';
 
-export const UserForm = (user, onSubmit) => {
+export const UserForm = ({user, onSubmit}) => {
     const {register, handleSubmit} = useForm({
         defaultValues: {
             firstname : user ? user.firstname : "",
@@ -16,11 +16,12 @@ export const UserForm = (user, onSubmit) => {
 
     const submitHandler = handleSubmit((data) => {
         onSubmit(data);
+        alert(JSON.stringify(data));
     });
 
     return (
         <div>
-            <form onSubmit={() => submitHandler}>
+            <form onSubmit={submitHandler}>
                 <div className="form-group userNameDiv">
                     <label htmlFor="firstname">First Name</label>
                     <br />
@@ -38,7 +39,7 @@ export const UserForm = (user, onSubmit) => {
                     <br />
                     <br />
                     <label htmlFor="password" >Password</label>
-                    <input type="text" {...register('password', { required: true })} className="form-control" name="password" id="password" placeholder="********" required />
+                    <input type="password" {...register('password', { required: true })} className="form-control" name="password" id="password" placeholder="********" required />
                     <br />
                     <br />
                     <label htmlFor="mobilenum">Mobile Number</label>
