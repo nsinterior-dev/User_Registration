@@ -16,8 +16,29 @@ app.use(express.json());
 app.use(Cors());
 
 
+//read
+app.get('/', async (req, res) => {
+    userModel.find({}, (err, user) => {
+        if(err) {
+            res.send(err);
+        }
 
+        res.send(user);
+    })
+})
 
+//create
+app.post('/create', (req, res) => {
+    const Users = new userModel(req.body);
+    Users
+        .save()
+        .then((Users) => {
+            res.json(Users);
+        })
+        .catch((err) => {
+            res.status(500).send(err.message);
+        })
+});
 
 
 
