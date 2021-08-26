@@ -16,7 +16,6 @@ export const UserForm = ({user, onSubmit}) => {
 
     const submitHandler = handleSubmit((data) => {
         onSubmit(data);
-        alert(JSON.stringify(data));
     });
 
     return (

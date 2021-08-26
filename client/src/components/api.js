@@ -17,10 +17,11 @@ export const getUser = (id) =>
 
 export const updateUser = (user, id) =>
     fetch(`http://localhost:4000/${id}`, {
-        method: 'POST',
+        method: "POST",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(user),
+        
     });
