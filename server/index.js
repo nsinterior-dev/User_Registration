@@ -43,6 +43,35 @@ app.post('/create', (req, res) => {
        
 });
 
+// get id
+app.get("/:id", (req, res) => {
+    const id = req.params.id;
+    userModel.findById(id, (err, user) => {
+        res.json(user);
+    })
+})
+
+//update
+app.post('/:id', (req, res) => {
+    const id = req.params.id;
+    userModel.findById(id, (err, user) => {
+        if (!user) res.status(404).send('User not found');
+        else {
+            user.firstname = req.body.firstname;
+            user.lastname = req.body.lastname;
+            user.gender = req.body.gender;
+            user.email = req.body.email;
+            user.password = req.body.password;
+            user.gender = req.body.gender;
+            user
+                .save()
+                .then((user) => {
+                    res.json(user);
+                })
+                .catch((err) => res.status(500).send(err.message));
+        }
+    });
+});
 
 
 app.listen(PORT, () => {
