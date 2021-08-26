@@ -1,0 +1,39 @@
+form {
+    margin: auto;
+    width: 70%;
+    padding: 16px;
+}
+
+.form-group {
+    margin: auto;
+    padding: 16px;
+}
+
+.userNameDiv {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.userName {
+    width: 38% !important;
+}
+
+.radio {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+.save{
+    width: 100%;
+    font-size: 16px !important;
+    padding: 16px !important;
+}
+
+label{
+    color: rgb(65, 119, 121);
+}
