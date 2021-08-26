@@ -25,14 +25,15 @@
 .back,
 .back:hover {
     text-decoration: none;
-    color: rgb(44, 38, 28);
+    color: rgba(48, 64, 92, 0.863);
     padding: 10px !important;
     font-size: 20px !important;
 }
 
-.arrow{
+.arrow {
     width: 60px !important;
 }
+
 .navbar-item {
     width: 100px;
     height: auto;
@@ -45,4 +46,10 @@ h3 {
     left: 30px !important;
     margin-top: 2px !important;
     vertical-align: middle;
+    color: cornflowerblue;
+}
+
+h4,
+.ImArrowLeft {
+    color: rgba(48, 64, 92, 0.863);
 }

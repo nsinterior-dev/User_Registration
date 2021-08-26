@@ -1,12 +1,15 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
-.container{
+
+
+.container {
     border: black solid 1px;
     height: auto;
-    padding: 12px ;
+    padding: 12px;
     margin: 20px auto;
-    
+
 }
