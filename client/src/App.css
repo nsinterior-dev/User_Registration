@@ -4,12 +4,29 @@
 
 }
 
-
-
 .container {
-    border: black solid 1px;
     height: auto;
     padding: 12px;
     margin: 20px auto;
 
+}
+
+th {
+    color: rgb(50, 58, 73) !important;
+}
+
+td {
+    color: rgb(70, 104, 165);
+}
+
+
+
+.delete {
+    border: none;
+    color: rgb(70, 104, 165) !important;
+
+}
+
+.MdModeEdit {
+    color: rgb(70, 104, 165) !important;
 }

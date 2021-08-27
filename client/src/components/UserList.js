@@ -50,7 +50,7 @@ export const UserList = () => {
                                    <td>{user.password}</td>
                                    <td>{user.mobilenum}</td>
                                    <td><Link to={`/edituser/${user._id}`} ><MdModeEdit /></Link></td>
-                                   <td><button onClick={()=>deleteUser(user._id)}><MdDelete /></button></td>
+                                   <td><button className="delete" onClick={()=>deleteUser(user._id)}><MdDelete /></button></td>
                                </tr>
                            ))
                        }
