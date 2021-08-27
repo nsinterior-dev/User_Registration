@@ -49,6 +49,7 @@ app.get("/:id", (req, res) => {
     userModel.findById(id, (err, user) => {
         res.json(user);
     })
+    console.log(id);
 })
 
 //update

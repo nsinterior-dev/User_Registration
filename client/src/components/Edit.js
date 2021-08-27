@@ -6,26 +6,27 @@ import { updateUser, getUser } from './api';
 
 export const EditUser = () => {
     const match = useRouteMatch();
-    const [human, setHuman] = useState();
+    const [user, setUser] = useState();
 
     useEffect(() => {
-        const fetchHuman = async () => {
-            const human = await getUser(match.params.id);
-            setHuman(human);
+        const fetchUser = async () => {
+            const user = await getUser(match.params.id);
+            setUser(user);
         }
-        fetchHuman();
+        fetchUser();
     }, []);
     
     const history = useHistory();
     const onSubmit = async (data) => {
         await updateUser(data, match.params.id);
         history.push("/");
+
     };
     
-    return human ? (
+    return user ? (
         <div className="wrap">
             <Header title="Edit User" />
-            <UserForm user={human} onSubmit={onSubmit} />
+            <UserForm user={user} onSubmit={onSubmit} />
         </div>
     ) : (
         <div>Loading...</div>

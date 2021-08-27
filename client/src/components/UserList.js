@@ -43,7 +43,7 @@ export const UserList = () => {
                                    <td>{user.email}</td>
                                    <td>{user.password}</td>
                                    <td>{user.mobilenum}</td>
-                                   <td><Link to="/edituser" ><MdModeEdit /></Link></td>
+                                   <td><Link to={`/edituser/${user._id}`} ><MdModeEdit /></Link></td>
                                    <td><MdDelete /></td>
                                </tr>
                            ))
