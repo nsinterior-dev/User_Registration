@@ -15,7 +15,7 @@ function App() {
                 <Route path="/" exact component={Nav}/>
                 <Route path="/userlist" exact component={UserList} />
                 <Route path="/newuser" exact component={NewUser} />
-                <Route path="/edituser" exact component={EditUser} />
+                <Route path="/edituser/:id" exact component={EditUser} />
               </Switch>
             </div>
         </Router>
