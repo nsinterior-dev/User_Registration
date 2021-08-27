@@ -3,7 +3,8 @@ import { Header } from "./header";
 import { Link } from 'react-router-dom';
 import { MdModeEdit } from 'react-icons/md';
 import { MdDelete } from 'react-icons/md';
-import { getUsers } from './api';
+import { getUsers} from './api';
+import axios from 'axios';
 export const UserList = () => {
 
     const [users, setUsers] = useState([]);
@@ -14,7 +15,12 @@ export const UserList = () => {
             setUsers(user);
         }
         fetchUsers();
-    }, [])
+    }, []);
+
+    const deleteUser = (id) => {
+        axios.delete(`http://localhost:4000/delete/${id}`);
+         
+    }
 
     return (
         <div>
@@ -44,7 +50,7 @@ export const UserList = () => {
                                    <td>{user.password}</td>
                                    <td>{user.mobilenum}</td>
                                    <td><Link to={`/edituser/${user._id}`} ><MdModeEdit /></Link></td>
-                                   <td><MdDelete /></td>
+                                   <td><button onClick={()=>deleteUser(user._id)}><MdDelete /></button></td>
                                </tr>
                            ))
                        }

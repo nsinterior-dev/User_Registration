@@ -75,6 +75,13 @@ app.post('/:id', (req, res) => {
     console.log(id);
 });
 
+//delete
+app.delete("/delete/:id", async (req, res) => {
+      const id = req.params.id;
+      await userModel.findByIdAndRemove(id).exec();
+      res.send("deleted");
+  
+})
 
 app.listen(PORT, () => {
     console.log(`Server started on ${PORT}`);
